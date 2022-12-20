@@ -58,9 +58,11 @@ for (let i = 0; 1 < 3; i = i + 1) {
 
 }
 
-console.log(lista_producto);
+console.log(lista_productos);
 
 // FIN ALTA DE PRODUCTOS //
+
+
 
 
 
@@ -73,6 +75,10 @@ for (let producto of lista_productos) {
 }
 
 // FIN RENDER DE PRODUCTOS //
+
+
+
+
 
 // SIMULO UNA COMPRA //
 
@@ -98,3 +104,4 @@ if (resultado_find != undefined) {
         console.log("Producto no encontrado")
     }
 }
+
