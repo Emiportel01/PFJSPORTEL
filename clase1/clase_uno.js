@@ -1,44 +1,100 @@
-function calcular_prestamo(monto, cuotas) {
+class Producto {
 
-    monto = parseFloat(monto);
-    let prestamo = 0;
+    constructor(nombre, precio, stock) {
 
-    if (monto > 0 && cuotas == 3) {
-        prestamo = monto + (monto * 0.05);
-        return prestamo
+        this.nombre = nombre;
+        this.precio = precio;
+        this.stock = stock;
     }
-    else if (monto > 0 && cuotas == 6) {
-        prestamo = monto + (monto * 0.15);
-        return prestamo
+
+
+    get_datos() {
+        console.log("<--------------------------->");
+        console.log("Nombre: ", this.nombre);
+        console.log("Precio ", this.precio);
+        console.log("Stock ", this.stock);
+        console.log("");
     }
-    else if (monto > 0 && cuotas == 9) {
-        prestamo = monto + (monto * 0.30);
-        return prestamo
+
+    get_stock() {
+
+        if (this.stock <= 0) {
+            return false
+        }
+
+        else {
+            return true
+        }
     }
-    else if (monto > 0 && cuotas == 12) {
-        prestamo = monto + (monto * 0.60);
-        return prestamo
+
+    venta_stock(cantidad) {
+
+        if (this.stock >= cantidad) {
+
+            this.stock = this.stock - cantidad;
+        }
+
+        else {
+            console.log("No tenemos tanto stock");
+        }
+
     }
 
 }
 
+// INICIO ALTA DE PRODUCTOS //
 
-let monto = "";
+let lista_productos = [];
 
-console.log("Calcular prestamo")
+for (let i = 0; 1 < 3; i = i + 1) {
 
-while (monto != "FIN") {
+    let nombre = prompt("Ingrese el nombre del producto");
+    let precio = prompt("Ingrese el precio del producto");
+    let stock = prompt("Ingrese el stock del producto");
 
-    monto = prompt("Ingrese el monto que desea o ingrese FIN para salir")
+    let producto = new Producto(nombre, precio, stock);
 
-    let cuotas = prompt("Ingrese la cantidad de cuotas 3, 6, 9 o 12");
+    lista_productos.push(producto);
 
-    let resultado = calcular_prestamo(monto, cuotas);
+}
 
-    console.log("Solicitud: ", monto);
-    console.log("En tantas cuotas: ", cuotas);
-    console.log("Devolucion: ", resultado);
+console.log(lista_producto);
 
-    console.log("Volver a calcular");
+// FIN ALTA DE PRODUCTOS //
 
+
+
+// INICIO RENDER DE PRODUCTOS //
+
+for (let producto of lista_productos) {
+
+    producto.get_datos();
+
+}
+
+// FIN RENDER DE PRODUCTOS //
+
+// SIMULO UNA COMPRA //
+
+function buscar_producto(producto) {
+
+    return producto.nombre == compra_usuario
+}
+
+let compra_usuario = prompt("Ingrese el nombre del producto que desea comprar");
+
+let resultado_find = lista_productos.find(buscar_producto);
+
+if (resultado_find != undefined) {
+
+    if (resultado_find.get_stock()) {
+
+        let unidades = prompt("¿Cuantas unidades quiere?");
+        resultado_find.venta_stock(unidades);
+        console.log("Gracias por su compra");
+    }
+
+    else {
+        console.log("Producto no encontrado")
+    }
 }
