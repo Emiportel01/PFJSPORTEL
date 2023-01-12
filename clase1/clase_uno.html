@@ -5,11 +5,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto</title>
+    <title>Formulario de Empleados</title>
 </head>
 
 <body>
 
+    <table>
+        <tr>
+            <th>Nombre</th>
+            <td><input type="text" id="txtNombre"></td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td><input type="text" id="txtNombre"></td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td><input type="number" id="txtEdad"></td>
+        </tr>
+        <tr>
+            <th>Sueldo</th>
+            <td><input type="number" id="txtSueldo"></td>
+        </tr>
+        <tr>
+            <th></th>
+            <td><button onclick="AgregarEmpleado();"> Enviar informacion </button></td>
+        </tr>
+    </table>
+
+    <hr>
+    <table id="ListarEmpleado" style="width: 40px;">
+        <tr>
+            <thead>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+                <th>Sueldo</th>
+            </thead>
+        </tr>
+
+    </table>
 
 
     <script src="./clase_uno.js"></script>
