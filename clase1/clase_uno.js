@@ -24,10 +24,11 @@ function agregarEmpleado() {
         }
     }
 
+
     if (validarFormulario) {
         empleados.push(personal);
-        let datos=JSON.stringify(empleados);
-        localStorage.setItem('listaEmpleados',datos);
+        let datos = JSON.stringify(empleados);
+        localStorage.setItem('listaEmpleados', datos);
         limpiarFormulario();
         mostrarEmpleados();
     }
@@ -56,3 +57,4 @@ function agregarEmpleado() {
             llenarTabla.appendChild(tr);
         }
     }
+}
