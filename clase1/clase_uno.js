@@ -10,7 +10,6 @@ function limpiarFormulario() {
 
 let empleados = [];
 function agregarEmpleado() {
-
     let personal = [];
     personal.push(document.getElementById('txtNombre').value);
     personal.push(document.getElementById('txtApellido').value);
@@ -23,7 +22,6 @@ function agregarEmpleado() {
             validarFormulario = False;
         }
     }
-
 
     if (validarFormulario) {
         empleados.push(personal);
@@ -41,6 +39,7 @@ function agregarEmpleado() {
 
         var llenarTabla = document.getElementById('tbDAtos');
         llenarTabla.innerHTML = "";
+
 
         for (x = 0; x < empleados.length; x++) {
             tr = document.createElement('tr');
