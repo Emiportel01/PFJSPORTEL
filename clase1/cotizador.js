@@ -6,16 +6,18 @@ let stockProductos = [
     { id: 5, nombre: "Camara", tipo: "cctv", cantidad: 1, desc: "Camara 12v", precio: 9000, img: './Imagenes/Cctv/Camara.jpg' },
     { id: 6, nombre: "Disco 1TB", tipo: "cctv", cantidad: 1, desc: "Disco 1TB de capacidad", precio: 17000, img: './Imagenes/Cctv/Disco1TB.jpg' },
     { id: 7, nombre: "Disco 2TB", tipo: "cctv", cantidad: 1, desc: "Disco 2TB de capacidad", precio: 23000, img: './Imagenes/Cctv/Disco2TB.jpg' },
-    { id: 13, nombre: "Kit Basico Alarma", tipo: "alarma", cantidad: 1, desc: "Kit compuesto por: Central,teclado,2 sensores de movimiento interior, 1 magnetico y sirena interior", precio: 62000, img: './Imagenes/Alarma/KitAlarma.webp' },
     { id: 8, nombre: "Central de alarma", tipo: "alarma", cantidad: 1, desc: "Central de alarma domiciliaria", precio: 35000, img: './Imagenes/Alarma/CentralAlarma.jpg' },
     { id: 9, nombre: "Teclado", tipo: "alarma", cantidad: 1, desc: "Teclado de activacion", precio: 17000, img: './Imagenes/Alarma/Teclado.webp' },
     { id: 10, nombre: "Sensor interior", tipo: "alarma", cantidad: 1, desc: "Sensor de movimiento interior", precio: 7000, img: './Imagenes/Alarma/PirInterior.jpg' },
     { id: 11, nombre: "Sensor exterior", tipo: "alarma", cantidad: 1, desc: "Sensor de movimiento exterior", precio: 15000, img: './Imagenes/Alarma/PirExterior.jpg' },
     { id: 12, nombre: "Sensor magnetico", tipo: "alarma", cantidad: 1, desc: "Sensor magnetico", precio: 1000, img: './Imagenes/Alarma/Magnetico.webp' },
+    { id: 13, nombre: "Kit Basico Alarma", tipo: "alarma", cantidad: 1, desc: "Kit compuesto por: Central,teclado,2 sensores de movimiento interior, 1 magnetico y sirena interior", precio: 62000, img: './Imagenes/Alarma/KitAlarma.webp' },
     { id: 14, nombre: "Sirena interior", tipo: "alarma", cantidad: 1, desc: "Sirena interior", precio: 8000, img: './Imagenes/Alarma/SirenaInterior.jpg' },
     { id: 15, nombre: "Sirena exterior", tipo: "alarma", cantidad: 1, desc: "Sirena exterior", precio: 7000, img: './Imagenes/Alarma/SirenaExterior.jpg' },
     { id: 16, nombre: "Barrera", tipo: "alarma", cantidad: 1, desc: "Barrera exterior hasta 40mts", precio: 13000, img: './Imagenes/Alarma/Barrera.webp' },
 ];
+
+
 
 const contenedorProductos = document.getElementById('contenedor-productos');
 const contenedorCarrito = document.getElementById('carrito-contenedor');

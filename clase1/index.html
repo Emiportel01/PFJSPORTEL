@@ -16,11 +16,13 @@
     <header>
         <h1 id="titulo" class="titulo">Seleccione los productos a cotizar</h1>
         <button id="boton-carrito">
-        <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            <span id="contadorCarrito"></span>
         </button>
     </header>
 
     <main id="contenedor-productos">
+        
         <div class="producto">
             <img src="../imagenes/camaras/KitCCTV.webp" alt>
             <h3>Kit basico CCTV</h3>
@@ -154,13 +156,13 @@
     <div class="modal-contenedor">
         <div class="modal-carrito">
             <h3>Carrito</h3>
-            <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
-            <div id="carrito-contenedor">
-            </div>
+            <button id="carritoCerrar"> <i class="fas fa-times-circle" aria-hidden="true"></i></button>
+            <div id="carrito-contenedor"></div>
             <button id="vaciar-carrito" class="boton-agregar">Vaciar carrito</button>
             <p class="precioProducto">Cotizacion total: $<span id="cotizacionTotal">0</span></p>
         </div>
     </div>
+    
     <script defer src="./carrito.js"></script>
     <script defer src="./cotizador.js"></script>
 </body>
